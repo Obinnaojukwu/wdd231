@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        background: black;
+    }
+
+    nav ul li {
+        padding: 10px 20px;
+    }
+
+    .course-work, .location {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+    }
+
+    .certificate {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
