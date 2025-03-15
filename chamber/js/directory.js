@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const memberElement = document.createElement("div");
             memberElement.classList.add("member-card");
 
-            // Handle missing images
+
             let imgSrc = `images/${member.image}`;
-            let fallbackImg = "images/default.jpg"; // Ensure you have a fallback image
+            let fallbackImg = "images/default.jpg"; 
 
             memberElement.innerHTML = `
                 <img src="${imgSrc}" alt="${member.name}" onerror="this.onerror=null;this.src='${fallbackImg}';">
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Members displayed.");
     }
 
-    // Toggle Views
+
     function toggleView(view) {
         if (view === "grid") {
             membersContainer.classList.add("grid-view");
