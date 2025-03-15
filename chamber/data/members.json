@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Tech Solutions",
+        "address": "123 Tech Street, Tech City",
+        "phone": "(123) 456-7890",
+        "website": "https://techsolutions.com",
+        "image": "./images/c2.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Green Energy Co.",
+        "address": "456 Green Road, Eco Town",
+        "phone": "(234) 567-8901",
+        "website": "https://greenenergy.com",
+        "image": "images/c1.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Fast Courier",
+        "address": "789 Speed Ave, Delivery City",
+        "phone": "(345) 678-9012",
+        "website": "https://fastcourier.com",
+        "image": "images/c4.jpg",
+        "membership": 1
+    }
+]
