@@ -9,6 +9,12 @@ const courses = [
 
 function displayCourses(filter = "all") {
     const courseList = document.getElementById("course-list");
+
+    if (!courseList) {
+        console.error("Error: 'course-list' element not found.");
+        return;
+    }
+
     courseList.innerHTML = "";
 
     let filteredCourses = courses;
@@ -23,8 +29,10 @@ function displayCourses(filter = "all") {
     });
 }
 
-document.getElementById("all").addEventListener("click", () => displayCourses("all"));
-document.getElementById("cse").addEventListener("click", () => displayCourses("CSE"));
-document.getElementById("wdd").addEventListener("click", () => displayCourses("WDD"));
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("all").addEventListener("click", () => displayCourses("all"));
+    document.getElementById("cse").addEventListener("click", () => displayCourses("CSE"));
+    document.getElementById("wdd").addEventListener("click", () => displayCourses("WDD"));
+    displayCourses(); 
+});
 
-displayCourses();

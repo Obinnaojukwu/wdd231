@@ -12,9 +12,10 @@
     <header>
         <img src="images/IMG_2631.jpg" alt="Profile Picture">
         <h1>Ojukwu A. Obinna</h1>
+        
     </header>
 
-    <nav>
+    <nav id="nav-menu">
         <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
@@ -45,27 +46,25 @@
         <section class="certificate">
             <h3>Web and Computer Programming Certificate</h3>
             <div class="filter-buttons">
-                <button class="active">All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button id="all" class="active">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
             </div>
 
-            <div class="courses">
-                <button class="cse">CSE 110</button>
-                <button class="wdd">WDD 130</button>
-                <button class="cse">CSE 111</button>
-                <button class="cse">CSE 210</button>
-                <button class="wdd">WDD 131</button>
-                <button class="wdd">WDD 231</button>
-            </div>
+            <div id="course-list" class="courses"></div>
         </section>
     </main>
 
     <footer>
         <p>©2025 🌺 Ojukwu Augustine 🌺 Obinna</p>
-        <p>Last Update: 01/01/1970 12:00:00</p>
+        <p id="last-modified"></p>
         <img src="images/Flag_of_Nigeria.svg.png" alt="Nigeria Flag">
     </footer>
 
+    <script src="js/navigation.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        document.getElementById("last-modified").textContent = "Last Update: " + document.lastModified;
+    </script>
 </body>
 </html>
