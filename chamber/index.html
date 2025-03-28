@@ -12,23 +12,22 @@
     <meta property="og:url" content="https://yourwebsite.com/index.html">
 
     <title>Home | Chamber of Commerce</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/normalize.css"></noscript>
+    <link rel="preload" href="css/style2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style2.css"></noscript>
     <script defer src="js/script.js"></script>
     <style>
-
         #hero img {
             width: 100%;
             max-height: 400px;
             object-fit: cover;
         }
 
-
         #weather-info {
             text-align: center;
             font-size: 1.2em;
         }
-
 
         .spotlight-card {
             border: 1px solid #ddd;
@@ -42,13 +41,44 @@
             max-width: 100px;
             margin-bottom: 10px;
         }
+
+        #menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        @media (max-width: 768px) {
+            #menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                padding: 10px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Chamber of Commerce</h1>
+        <button id="menu-toggle">☰</button>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -58,9 +88,11 @@
     </header>
 
     <main>
-
         <section id="hero">
-            <img src="images/c8.webp" alt="Chamber of Commerce Hero Image">
+            <picture>
+                <source srcset="images/c8.webp" media="(max-width: 768px)">
+                <img src="images/c8.webp" alt="Chamber of Commerce Hero Image" width="1200" height="400">
+            </picture>
             <div class="hero-text">
                 <h2>Welcome to the Chamber of Commerce</h2>
                 <p>Your gateway to local businesses and opportunities.</p>
@@ -96,7 +128,6 @@
     </footer>
 
     <script>
-
         document.getElementById("year").textContent = new Date().getFullYear();
         document.getElementById("last-modified").textContent = document.lastModified;
 
@@ -157,8 +188,13 @@
         }
         
         loadSpotlights();
+
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.getElementById("nav-menu");
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
     </script>
 </body>
 </html>
-
-
