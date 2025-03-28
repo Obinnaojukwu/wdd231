@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1>Thank You for Your Application</h1>
+        <p>We appreciate your interest in joining the Chamber of Commerce. Below is the information you submitted:</p>
+        <ul>
+            <li>First Name: <span id="firstName"></span></li>
+            <li>Last Name: <span id="lastName"></span></li>
+            <li>Email: <span id="email"></span></li>
+            <li>Mobile Phone: <span id="phone"></span></li>
+            <li>Business/Organization Name: <span id="organization"></span></li>
+            <li>Submission Timestamp: <span id="timestamp"></span></li>
+        </ul>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('firstName').textContent = urlParams.get('firstName');
+        document.getElementById('lastName').textContent = urlParams.get('lastName');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('phone').textContent = urlParams.get('phone');
+        document.getElementById('organization').textContent = urlParams.get('organization');
+        document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
