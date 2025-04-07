@@ -1,0 +1,59 @@
+[
+    {
+      "name": "National Museum",
+      "address": "123 Museum Rd, Cityville",
+      "description": "Explore the rich history and cultural heritage of our region through exhibitions and artifacts.",
+      "image": "images/c1.jpg",
+      "link": "https://example.com/national-museum"
+    },
+    {
+      "name": "City Park",
+      "address": "456 Greenway Blvd, Cityville",
+      "description": "Enjoy walking trails, picnic spots, a playground, and relaxing green space for all ages.",
+      "image": "images/c2.jpg",
+      "link": "https://example.com/city-park"
+    },
+    {
+      "name": "Historic Courthouse",
+      "address": "789 Justice Ave, Cityville",
+      "description": "Visit our beautifully preserved courthouse that played a key role in local governance.",
+      "image": "images/c3.jpg",
+      "link": "https://example.com/historic-courthouse"
+    },
+    {
+      "name": "Riverwalk Market",
+      "address": "321 River Rd, Cityville",
+      "description": "Shop locally grown produce and handmade goods at the scenic weekend market.",
+      "image": "images/c4.jpg",
+      "link": "https://example.com/riverwalk-market"
+    },
+    {
+      "name": "Art Gallery",
+      "address": "111 Canvas St, Cityville",
+      "description": "View rotating art exhibits from local and international artists in a modern space.",
+      "image": "images/c11.jpg",
+      "link": "https://example.com/art-gallery"
+    },
+    {
+      "name": "Tech Innovation Hub",
+      "address": "222 Silicon Ave, Cityville",
+      "description": "A center for startups, workshops, and co-working spaces driving the future of tech.",
+      "image": "images/c7.jpg",
+      "link": "https://example.com/tech-innovation"
+    },
+    {
+      "name": "Botanical Gardens",
+      "address": "333 Bloom Ln, Cityville",
+      "description": "A peaceful retreat featuring exotic plants, water features, and seasonal floral displays.",
+      "image": "images/c9.webp",
+      "link": "https://example.com/botanical-gardens"
+    },
+    {
+      "name": "Local Theater",
+      "address": "444 Stage Blvd, Cityville",
+      "description": "Catch live performances and community plays in our historic local theater.",
+      "image": "images/c10.jpg",
+      "link": "https://example.com/local-theater"
+    }
+  ]
+  

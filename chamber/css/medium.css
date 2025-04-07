@@ -1,0 +1,12 @@
+@media (min-width: 641px) {
+    main {
+      grid-template-areas:
+        "visitor-message interests";
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    #interests {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

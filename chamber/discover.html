@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover - Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
+  <script src="js/visitorMessage.js" defer></script>
+  <script src="js/loadInterests.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/c8.webp" alt="Chamber Logo">
+    <h1> Chamber of Commerce</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="discover.html" class="active">Discover</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="visitor-message">
+  
+    </aside>
+    <section id="interests">
+      
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Ojukwu Obinna | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
