@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Creative Studio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="mona">Brand</span>
+      <span class="lisa">Name</span>
+      <p class="logo-subtext">A Classic Signature Brand</p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Casting</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </header>
+
+  <main class="form-container">
+    <h2>Contact Us</h2>
+    <form action="success.html" method="get">
+      <label>Name: <input type="text" name="name" required></label>
+      <label>Email: <input type="email" name="email" required></label>
+      <label>Message: <textarea name="message" required></textarea></label>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+ 
+  <section class="model-cards-section">
+    <h2>Our Featured Models</h2>
+    <div id="modelCards" class="model-cards-container"></div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  
+  <script>
+    async function loadModelData() {
+      try {
+        const res = await fetch('data/model.json');
+        const models = await res.json();
+        const container = document.getElementById("modelCards");
+
+        models.forEach(model => {
+          const card = document.createElement("div");
+          card.className = "model-card";
+          card.innerHTML = `
+            <img src="${model.image}" alt="${model.name}" />
+            <h3>${model.name}</h3>
+            <p class="title">${model.title}</p>
+            <p class="bio">${model.bio}</p>
+          `;
+          container.appendChild(card);
+        });
+      } catch (err) {
+        console.error('Failed to load model data:', err);
+      }
+    }
+
+    loadModelData();
+  </script>
+</body>
+</html>

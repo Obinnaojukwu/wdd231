@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Jesse Edwards",
+    "location": "New York, USA",
+    "career": "Over 10 years modeling experience, worked with Vogue, Elle, Chanel",
+    "awards": "Star Model 2019, Vogue Cover",
+    "interests": "Philanthropy, Ethical Fashion",
+    "image": "images/profile_female.jpg"
+  },
+  {
+    "name": "Naznin Khan",
+    "location": "London, UK",
+    "career": "Featured in Elle India, fashion blogger",
+    "awards": "Rising Model of the Year 2022",
+    "interests": "Yoga, Poetry",
+    "image": "images/profile_male.jpg"
+  }
+]
