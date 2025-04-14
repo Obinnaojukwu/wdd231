@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
             el.style.opacity = "1";
         }, index * 300);
     });
-
     
     let sliders = document.querySelectorAll(".image-slider-container .slider");
     let indexes = new Array(sliders.length).fill(0);
